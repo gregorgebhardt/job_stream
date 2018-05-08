@@ -70,7 +70,7 @@ if os.path.lexists(exeIncludes):
 if os.path.lexists(exeLibs):
     libdirs.append(exeLibs)
 
-boostPy = "boost_python{}".format("" if sys.version_info.major <= 2 else "3")
+boostPy = "boost_python{}".format("" if sys.version_info.major <= 2 else "-py35")
 job_stream = Extension('_job_stream',
         define_macros = [ ('PYTHON_MAJOR', sys.version_info.major) ],
         include_dirs = incdirs + [ '/usr/local/include' ],
