@@ -75,7 +75,7 @@ job_stream = Extension('_job_stream',
         define_macros = [ ('PYTHON_MAJOR', sys.version_info.major) ],
         include_dirs = incdirs + [ '/usr/local/include' ],
         libraries = libraries + [ 'boost_filesystem', boostPy,
-            'boost_system', 'boost_thread', 'boost_serialization', 'dl'
+            'boost_system', 'boost_thread', 'dl'
         ],
         library_dirs = libdirs,
         sources = [
