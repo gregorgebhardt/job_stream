@@ -19,7 +19,7 @@ except:
     long_desc = open('README.md').read()
 
 # Extra directories coming from non-system paths.
-incdirs = [ '.', 'job_stream/boost_process', 'yaml-cpp-0.5.1/include',
+incdirs = [ '.', 'yaml-cpp-0.5.1/include',
         'boost-mpi-1.61/include', 'boost-serialization-1.61/include',
         'boost-serialization-1.61/src' ]
 libdirs = []
@@ -75,7 +75,7 @@ job_stream = Extension('_job_stream',
         define_macros = [ ('PYTHON_MAJOR', sys.version_info.major) ],
         include_dirs = incdirs + [ '/usr/local/include' ],
         libraries = libraries + [ 'boost_filesystem', boostPy,
-            'boost_system', 'boost_thread', 'dl'
+            'boost_system', 'boost_thread', 'boost_serialization', 'dl'
         ],
         library_dirs = libdirs,
         sources = [

@@ -1,6 +1,0 @@
-job_stream.invoke
-=================
-
-.. currentmodule:: job_stream
-
-.. autofunction:: invoke
